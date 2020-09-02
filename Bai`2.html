@@ -4,13 +4,9 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>BaiTap2</title>
-        
+        <h1 id="title">Survey Form</h1>
+        <p id="description">This is a survey test.</p>
     </head>
-
-<header>
-    <h1 id="title">Survey Form</h1>
-    <p id="description">This is a survey test.</p>
-</header>
 
 <main id="main">
     <body class="body">
@@ -29,17 +25,40 @@
                     <input id="number" type="number" min="1" max="120" placeholder="Enter your age">
                 </div>
                 <div class="div">
-                    <label for="dropdown">What do you love to do?</label>
+                    <label for="dropdown">How much have you spend in the computer or in the video games</label>
                     <select id="dropdown">
-                        <option value="1">Listening to Music</option>
-                        <option value="2">Traveling</option>
-                        <option value="3">Watchong Movies</option>
-                        <option value="4">Video Games</option>
-                        <option value="5">Sports</option>
+                        <option value="1">Less than 200$</option>
+                        <option value="2">200$ - 400$</option>
+                        <option value="3">400$ - 600$</option>
+                        <option value="4">Over 600$</option>
                     </select>
                 </div>
                 <div class="div">
-                    <label for="radio">What </label>
+                    <label for="radio">You usually play online or offine games</label>
+                    <input id="radio-choice1" type="radio" name="game" value="online">
+                    <label for="radio-choice1">Online Games</label>
+                    <input id="radio-choice2" type="radio" name="game" value="offline">
+                    <label for="radio-choice2">Offline Games</label>
+                </div>
+                <div class="div">
+                    <label for="checkbox">What type of game is your favorite?</label>
+                    <input id="Shooting" type="checkbox" name="Shooting" value="shooting-game">
+                    <label for="Shooting">Shooting Game</label>
+                    <input id="Action" type="checkbox" name="Action" value="action-game">
+                    <label for="Action">Action Game</label>
+                    <input id="Racing" type="checkbox" name="Racing" value="racing-game">
+                    <label for="Racing">Racing Game</label>
+                    <input id="Board" type="checkbox" name="Board" value="board-game">
+                    <label for="Board">Board Game</label>
+                    <input id="Sport" type="checkbox" name="Sport" value="sport-game">
+                    <label for="Sport">Sport Game</label>
+                </div>
+                <div class="div">
+                    <label for="game-name">Do you prefer any games?</label>
+                    <textarea id="game-name" name="game-name" rows="5" cols="33"></textarea>
+                </div>
+                <div class="submit">
+                    <input id="submit" name="submit" type="submit" value="Submit">
                 </div>
             </fieldset>
         </form>
