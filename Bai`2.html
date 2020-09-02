@@ -5,7 +5,41 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>BaiTap2</title>
         <h1 id="title">Game Survey</h1>
-        <p id="description">This is a survey test.</p>
+        <p id="description">This is a game Survey.</p>
+        <style>
+        .body { 
+            text-align: justify;
+            font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif, ;
+            font-size: 20px;
+            background: linear-gradient(to right, rgb(100, 155, 175), rgb(120, 220, 200));
+          }
+          
+          .div { 
+            padding: 10px 10px 10px 20px;
+          }
+          
+          textarea { 
+          display: block;
+          margin: 20px 30px 4px 5px;
+          
+          }
+          
+          input[type=submit] { 
+            background-color: rgb(55, 255, 55, 0.6);
+            color: black;
+            border: 2px solid rgba(0, 0, 0, 0.5);
+            width: 10%;
+            border-radius: 20px;
+            text-decoration: none;
+            margin: 2px 2px;
+            cursor: pointer;
+          }
+          
+          input[type=submit]:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+          }
+        </style>
     </head>
 
 <main id="main">
@@ -14,15 +48,15 @@
             <fieldset>
                 <div class="div">
                     <label id="name-label" for="name">Name:</label>
-                    <input id="name" type="text" placeholder="Enter your name here" required>
+                    <input id="name" type="text" size="30" placeholder="Enter your name here" required>
                 </div>
                 <div class="div">
                     <label id="email-label" for="email">Email:</label>
-                    <input id="email" type="email" placeholder="Enter your email address here" required>
+                    <input id="email" type="email" size="30" placeholder="Enter your email address here" required>
                 </div>
                 <div class="div">
                     <label id="number-label" for="number">Age (optional):</label>
-                    <input id="number" type="number" min="1" max="120" placeholder="Enter your age">
+                    <input id="number" type="number" min="1" max="100" placeholder="Enter your age">
                 </div>
                 <div class="div">
                     <label for="dropdown">How much have you spend in the computer or in the video games</label>
@@ -55,7 +89,7 @@
                 </div>
                 <div class="div">
                     <label for="game-name">Do you prefer any games?</label>
-                    <textarea id="game-name" name="game-name" rows="5" cols="33"></textarea>
+                    <textarea id="game-name" name="game-name" rows="5" cols="33" placeholder="Name of your Games"></textarea>
                 </div>
                 <div class="submit">
                     <input id="submit" name="submit" type="submit" value="Submit">
