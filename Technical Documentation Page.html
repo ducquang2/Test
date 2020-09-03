@@ -1,188 +1,311 @@
-<nav id="navbar">
-    <header>Contents</header>
-    <ul>
-      <li><a class="nav-link" href="#Introduction">Introduction</a></li>
-      <li>
-        <a class="nav-link" href="#History"
-          >History</a>
-      </li>
-      <li>
-        <a class="nav-link" href="#Character_Rights">Character Rights</a>
-      </li>
-      <li><a class="nav-link" href="#Marvel_Knights">Marvel Knights</a></li>
-      <li><a class="nav-link" href="#Units">Units</a></li>
-      <li>
-        <a class="nav-link" href="#Logo">Logo</a>
-      </li>
-      <li><a class="nav-link" href="#Production_library">Production library</a></li>
-      <li><a class="nav-link" href="#Reference">Reference</a></li>
-      </ul>
-  </nav>
-  <main id="main-doc">
-    <section class="main-section" id="Introduction">
-      <header>Introduction</header>
-      <article>
-        <p>
-            Marvel Studios, LLC (originally known as Marvel Films from 1993 to 1996) is an American film and television studio that is a subsidiary of The Walt Disney Studios. Marvel Studios is known for the production of the Marvel Cinematic Universe films, based on characters that appear in Marvel Comics publications.
-        </p>
-  
-        <p>
-            Marvel Studios has released 23 films since 2008 within the Marvel Cinematic Universe, from Iron Man (2008) to Spider-Man: Far From Home (2019). These films all share continuity with each other, along with the One-Shots produced by the studio and the television shows produced by Marvel Television.
-        </p>
-        <p>    
-            In addition to the Marvel Cinematic Universe, Marvel Studios was also involved with the production of other Marvel-character film franchises that have exceeded $1 billion in North American box office revenue: the X-Men and Spider-Man multi-film franchises.
-        </p>
-        <p>    
-            Marvel Studios is also developing television series which will air on Disney+, and will oversee production for remaining Marvel Television series following its folding into Marvel Studios.
-        </p>
-      </article>
-    </section>
-    <section class="main-section" id="History">
-      <header>History</header>
-      <article>
-        <p>This guide assumes you have the following basic background:</p>
-  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <style>
+        html,
+        body {
+            min-width: 290px;
+            color: #4d4e53;
+            background-color: #ffffff;
+            font-family: "Open Sans", Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        #navbar {
+            position: fixed;
+            min-width: 290px;
+            top: 0px;
+            left: 0px;
+            width: 300px;
+            height: 100%;
+            border-right: solid;
+            border-color: rgba(0, 22, 22, 0.4);
+        }
+
+        header {
+            color: black;
+            margin: 10px;
+            text-align: center;
+            font-size: 1.8em;
+            font-weight: thin;
+        }
+
+        #main-doc header {
+            text-align: left;
+            margin: 0px;
+        }
+
+        #navbar ul {
+            height: 88%;
+            padding: 0;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        #navbar li {
+            color: #4d4e53;
+            border-top: 1px solid;
+            list-style: none;
+            position: relative;
+            width: 100%;
+        }
+
+        #navbar a {
+            display: block;
+            padding: 10px 30px;
+            color: #4d4e53;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #main-doc {
+            position: absolute;
+            margin-left: 310px;
+            padding: 20px;
+            margin-bottom: 110px;
+        }
+
+        section article {
+            color: #4d4e53;
+            margin: 15px;
+            font-size: 0.96em;
+        }
+
+        section li {
+            margin: 15px 0px 0px 20px;
+        }
+
+        code {
+            display: block;
+            text-align: left;
+            white-space: pre;
+            position: relative;
+            word-break: normal;
+            word-wrap: normal;
+            line-height: 1;
+            background-color: #f7f7f7;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        @media only screen and (max-width: 815px) {
+
+            /* For mobile phones: */
+            #navbar ul {
+                border: 1px solid;
+                height: 207px;
+            }
+
+            #navbar {
+                background-color: white;
+                position: absolute;
+                top: 0;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                max-height: 275px;
+                border: none;
+                z-index: 1;
+                border-bottom: 2px solid;
+            }
+
+            #main-doc {
+                position: relative;
+                margin-left: 0px;
+                margin-top: 270px;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            #main-doc {
+                margin-left: -10px;
+            }
+
+            code {
+                margin-left: -20px;
+                width: 100%;
+                padding: 15px;
+                padding-left: 10px;
+                padding-right: 45px;
+                min-width: 233px;
+            }
+        }
+    </style>
+</head> 
+
+<body>
+    <nav id="navbar">
+        <header>JS Documentation</header>
         <ul>
-          <li>
-            A general understanding of the Internet and the World Wide Web (WWW).
-          </li>
-          <li>Good working knowledge of HyperText Markup Language (HTML).</li>
-          <li>
-            Some programming experience. If you are new to programming, try one of
-            the tutorials linked on the main page about JavaScript.
-          </li>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li>
+                <a class="nav-link" href="#Basic">Basic</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Elements">Elements</a>
+            </li>
+            <li><a class="nav-link" href="#Heading">Heading</a></li>
+            <li><a class="nav-link" href="#CSS">CSS</a></li>
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
         </ul>
-      </article>
-    </section>
-    <section class="main-section" id="Character_Rights">
-      <header>JavaScript and Java</header>
-      <article>
-        <p>
-          JavaScript and Java are similar in some ways but fundamentally different
-          in some others. The JavaScript language resembles Java but does not have
-          Java's static typing and strong type checking. JavaScript follows most
-          Java expression syntax, naming conventions and basic control-flow
-          constructs which was the reason why it was renamed from LiveScript to
-          JavaScript.
-        </p>
-  
-        <p>
-          In contrast to Java's compile-time system of classes built by
-          declarations, JavaScript supports a runtime system based on a small
-          number of data types representing numeric, Boolean, and string values.
-          JavaScript has a prototype-based object model instead of the more common
-          class-based object model. The prototype-based model provides dynamic
-          inheritance; that is, what is inherited can vary for individual objects.
-          JavaScript also supports functions without any special declarative
-          requirements. Functions can be properties of objects, executing as
-          loosely typed methods.
-        </p>
-        <p>
-          JavaScript is a very free-form language compared to Java. You do not
-          have to declare all variables, classes, and methods. You do not have to
-          be concerned with whether methods are public, private, or protected, and
-          you do not have to implement interfaces. Variables, parameters, and
-          function return types are not explicitly typed.
-        </p>
-      </article>
-    </section>
-    <section class="main-section" id="Marvel_Knights">
-      <header>Hello world</header>
-      <article>
-        To get started with writing JavaScript, open the Scratchpad and write your
-        first "Hello world" JavaScript code:
-        <code
-          >function greetMe(yourName) { alert("Hello " + yourName); }
-          greetMe("World");
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>
+                    HTML is the standard markup language for creating Web pages.
+                </p>
+
+                <p>
+                    What is HTML?
+                </p>
+                <ul>
+                    <li>
+                        HTML stands for Hyper Text Markup Language
+                    </li>
+                    <li>
+                        HTML is the standard markup language for creating Web pages
+                    </li>
+                    <li>
+                        HTML describes the structure of a Web page
+                    </li>
+                    <li>
+                        HTML consists of a series of elements
+                    </li>
+                    <li>
+                        HTML elements tell the browser how to display the content
+                    </li>
+                    <li>
+                        HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this
+                        is a link", etc.
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Basic">
+            <header>Basic</header>
+            <article>
+                <p>HTML Basic Examples</p>
+                <ul>
+                    <li>
+                        All HTML documents must start with a document type declaration: < !DOCTYPE html>.
+                    </li>
+                    <li>The HTML document itself begins with < html> and ends with < /html>.</li>
+                    <li>
+                        The visible part of the HTML document is between < body> and < /body>.
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Elements">
+            <header>HTML Elements</header>
+            <article>
+                <p>
+                    An HTML element is defined by a start tag, some content, and an end tag:
+                </p>
+                <code>
+            <span style="color: brown;">
+            <span style="color: mediumaquamarine;"><</span>tagname<span style="color: mediumaquamarine;">></span>
+            </span>
+            "Content goes here.."
+            <span style="color: brown;">
+            <span style="color: mediumaquamarine;"><</span>/tagname<span style="color: mediumaquamarine;">></span>
+            </span>
         </code>
-  
-        Select the code in the pad and hit Ctrl+R to watch it unfold in your
-        browser!
-      </article>
-    </section>
-    <section class="main-section" id="Units">
-      <header>Variables</header>
-      <p>
-        You use variables as symbolic names for values in your application. The
-        names of variables, called identifiers, conform to certain rules.
-      </p>
-      <p>
-        A JavaScript identifier must start with a letter, underscore (_), or
-        dollar sign ($); subsequent characters can also be digits (0-9). Because
-        JavaScript is case sensitive, letters include the characters "A" through
-        "Z" (uppercase) and the characters "a" through "z" (lowercase).
-      </p>
-      <p>
-        You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers.
-        You can also use the Unicode escape sequences as characters in
-        identifiers. Some examples of legal names are Number_hits, temp99, and
-        _name.
-      </p>
-    </section>
-    <section class="main-section" id="Logo">
-      <header>Declaring variables</header>
-      <article>
-        You can declare a variable in three ways:
-        <p>
-          With the keyword var. For example, <code>var x = 42.</code> This syntax
-          can be used to declare both local and global variables.
-        </p>
-        <p>
-          By simply assigning it a value. For example, <code>x = 42.</code> This
-          always declares a global variable. It generates a strict JavaScript
-          warning. You shouldn't use this variant.
-        </p>
-        <p>
-          With the keyword let. For example,<code> let y = 13.</code> This syntax
-          can be used to declare a block scope local variable. See Variable scope
-          below.
-        </p>
-      </article>
-    </section>
-    <section class="main-section" id="Production_library">
-      <header>Variable scope</header>
-      <article>
-        <p>
-          When you declare a variable outside of any function, it is called a
-          global variable, because it is available to any other code in the
-          current document. When you declare a variable within a function, it is
-          called a local variable, because it is available only within that
-          function.
-        </p>
-  
-        <p>
-          JavaScript before ECMAScript 2015 does not have block statement scope;
-          rather, a variable declared within a block is local to the function (or
-          global scope) that the block resides within. For example the following
-          code will log 5, because the scope of x is the function (or global
-          context) within which x is declared, not the block, which in this case
-          is an if statement.
-        </p>
-        <code>if (true) { var x = 5; } console.log(x); // 5</code>
-        <p>
-          This behavior changes, when using the let declaration introduced in
-          ECMAScript 2015.
-        </p>
-  
-        <code
-          >if (true) { let y = 5; } console.log(y); // ReferenceError: y is not
-          defined</code
-        >
-      </article>
-    </section>
-    <section class="main-section" id="Reference">
-      <header>Reference</header>
-      <article>
-        <ul>
-          <li>
-            All the documentation in this page is taken from
-            <a
-              href="https://en.wikipedia.org/wiki/Marvel_Studios"
-              target="_blank"
-              >wikipedia</a
-            >
-          </li>
-        </ul>
-      </article>
-    </section>
-  </main>
+
+                <p>
+                    The HTML element is everything from the start tag to the end tag:
+                </p>
+                <code>
+            <span style="color: brown;">
+            <span style="color: mediumaquamarine;"><</span>h1<span style="color: mediumaquamarine;">></span>
+            </span>
+            "My first heading"
+            <span style="color: brown;">
+            <span style="color: mediumaquamarine;"><</span>/h1<span style="color: mediumaquamarine;">></span>
+            </span><br>
+        </code>
+                <code>
+            <span style="color: brown;">
+            <span style="color: mediumaquamarine;"><</span>p<span style="color: mediumaquamarine;">></span>
+            </span>
+            "My first paragraph"
+            <span style="color: brown;">
+            <span style="color: mediumaquamarine;"><</span>/p<span style="color: mediumaquamarine;">></span>
+            </span>
+        </code>
+            </article>
+        </section>
+        <section class="main-section" id="Heading">
+            <header>HTML Heading</header>
+            <article>
+                <p>
+                    HTML headings are titles or subtitles that you want to display on a webpage.
+                    HTML headings are defined with the < h1> to < h6> tags.
+                </p>
+                <code>
+                <span style="color: brown;">
+                <span style="color: mediumaquamarine;"><</span>h1<span style="color: mediumaquamarine;">></span>
+                </span>
+                "Heading 1"
+                <span style="color: brown;">
+                <span style="color: mediumaquamarine;"><</span>/h1<span style="color: mediumaquamarine;">></span>
+                </span>
+                <br>
+            </code>
+                <code>
+                <span style="color: brown;">
+                <span style="color: mediumaquamarine;"><</span>h2<span style="color: mediumaquamarine;">></span>
+                </span>
+                "Heading 2"
+                <span style="color: brown;">
+                <span style="color: mediumaquamarine;"><</span>/h2<span style="color: mediumaquamarine;">></span>
+                </span>
+                <br>
+            </code>
+                <code>
+                <span style="color: brown;">
+                <span style="color: mediumaquamarine;"><</span>h3<span style="color: mediumaquamarine;">></span>
+                </span>
+                "Heading 3"
+                <span style="color: brown;">
+                <span style="color: mediumaquamarine;"><</span>/h3<span style="color: mediumaquamarine;">></span>
+                </span>
+
+        </code>
+            </article>
+        </section>
+        <section class="main-section" id="CSS">
+            <header>HTML CSS</header>
+            <p>
+                CSS stands for Cascading Style Sheets.
+            </p>
+            <p>
+                CSS saves a lot of work. It can control the layout of multiple web pages all at once.
+            </p>
+            <p>
+                Cascading Style Sheets (CSS) is used to format the layout of a webpage.
+            </p>
+        </section>
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <article>
+                <ul>
+                    <li>
+                        All the documentation in this page is taken from
+                        <a href="https://www.w3schools.com/html/default.asp" target="_blank">w3schools</a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
