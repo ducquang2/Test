@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,306 +8,328 @@
 
     <style>
         header {
-    position: fixed;
-    top:0px;
-    width: 100%;
-    line-height: 40px;
-    background-color: rgb(0, 0, 0);
-    color: #f8f9fa;
-    text-align: center;
-    font-size: 0.8em;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            line-height: 40px;
+            background-color: rgb(0, 0, 0);
+            color: #f8f9fa;
+            text-align: center;
+            font-size: 0.8em;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
 
-        #nav-bar{
-    height: 50px;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0px 5px 5px grey;
-    }
+        #nav-bar {
+            height: 50px;
+            padding: 15px;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0px 5px 5px grey;
+        }
 
-        #header-img{
-    height: 100%;
-    }
+        #header-img {
+            height: 100%;
+        }
 
-        #nav-links{
-    display: flex;
-    width: 80%;
-    justify-content: space-around;
-    }
+        #nav-links {
+            display: flex;
+            width: 80%;
+            justify-content: space-around;
+        }
 
-        #nav-links a{
-  color: black;
-  text-decoration: none;
-    }
+        #nav-links a {
+            color: black;
+            text-decoration: none;
+        }
 
-        @media (max-width: 850px){
-        .hide-on-small{
-    display: none;
+        @media (max-width: 850px) {
+            .hide-on-small {
+                display: none;
             }
-    }
+        }
 
-    main{
-  padding-top: 100px;
-  text-align: center;
-    }
+        main {
+            padding-top: 100px;
+            text-align: center;
+        }
 
-    footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-    }
-    
-    #features{
-  padding: 50px 0;
-  background: linear-gradient(to right, grey , #000000);
-  display: flex;
-  justify-content: center;
-  color: #f8f9fa;
-    }
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
 
-    .white-hr{
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0; 
-  border-color: white;
-}
+        #features, #trailer, #price {
+            padding: 150px;
+        }
 
-.content{
-  width: 600px;
-  display: flex;
-  flex-direction: column;
-  padding: 0 20px;
-}
+        #features {
+            /* padding: 50px 0; */
+            background: linear-gradient(to right, grey, #000000);
+            display: flex;
+            justify-content: center;
+            color: #f8f9fa;
+        }
 
-#trailer{
-  padding: 50px 0px;
-  display: flex;
-  justify-content: center;
-}
+        .white-hr {
+            display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 1em 0;
+            padding: 0;
+            border-color: white;
+        }
 
-#video{
-  width: 100%;
-}
+        .content {
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            padding: 0 20px;
+        }
 
-#price{
-  padding: 50px 0;
-  background: linear-gradient(to right, gray , #000000);
-  display: flex;
-  justify-content: center;
-  color: #f8f9fa;
-}
+        #trailer {
+            /* padding: 50px 0px; */
+            display: flex;
+            justify-content: center;
+        }
 
-.price-container{
-  flex-direction: row;
-  justify-content: space-around;
-}
+        #video {
+            width: 100%;
+        }
 
-.price-card{
-  width: 180px;
-  height: 300px;
-  border: 1px solid grey;
-  border-radius: 5px;
-  background-color: white;
-  display: flex;
-  flex-flow: column;
-}
+        #price {
+            /* padding: 50px 0; */
+            background: linear-gradient(to right, gray, #000000);
+            display: flex;
+            justify-content: center;
+            color: #f8f9fa;
+        }
 
-.price-card-header{
-  background-color: #000000;
-  font-weight: bold;
-  font-size: 18px;
-  color: white;
-  padding: 15px 0px;
-}
+        .price-container {
+            flex-direction: row;
+            justify-content: space-around;
+        }
 
-.price-card-content{
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  align-items: center;
-  line-height: 1.5em;
-  color: #000000;
-}
+        .price-card {
+            width: 180px;
+            height: auto;
+            border: 1px solid grey;
+            border-radius: 5px;
+            background-color: white;
+            display: flex;
+            flex-flow: column;
+        }
 
-.price-text{
-  font-weight: bold;
-  font-size: 20px;
-  margin: 10px 0;
-  color: #000000;
-}
+        .price-card-header {
+            background-color: #000000;
+            font-weight: bold;
+            font-size: 18px;
+            color: white;
+            padding: 15px 0px;
+        }
 
-.price-btn{
-  margin: 20px 0;
-  border: none;
-  color: #000000;
-  padding: 15px 32px;
-  text-align: center;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 16px;    
-  -webkit-transition-duration: 0.3s; 
-  transition-duration: 0.3s;
-  background-color: white;
-  color: black;
-  border: 2px solid #000000;
-}
+        .price-card-content {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.5em;
+            color: #000000;
+        }
 
-.price-btn:hover{
-  background-color: #000000; 
-  color: white;
-}
+        .price-text {
+            font-weight: bold;
+            font-size: 20px;
+            margin: 10px 0;
+            color: #000000;
+        }
 
-@media (max-width: 600px){
-  .price-container{
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .price-card{
-    margin-bottom: 20px;
-  }
-}
+        .price-btn {
+            margin: 20px 0;
+            border: none;
+            color: #000000;
+            padding: 15px 32px;
+            text-align: center;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 16px;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            background-color: white;
+            color: black;
+            border: 2px solid #000000;
+        }
 
-#form{
-  padding: 50px 0;
-}
+        .price-btn:hover {
+            background-color: #000000;
+            color: white;
+        }
 
-#email{
-  min-width: 200px;
-  padding: 5px 5px;
-  margin: 15px 0;
-}
+        @media (max-width: 600px) {
+            .price-container {
+                flex-direction: column;
+                align-items: center;
+            }
 
-#submit{
-  font-weight: bold;
-  background-color: rgb(239, 193, 76);
-  border: none;
-  cursor: pointer;
-  padding: 10px 32px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-}
+            .price-card {
+                margin-bottom: 20px;
+            }
+        }
 
-#submit:hover{
-  background-color: rgb(255, 220, 132);
-}
+        #form {
+            padding: 50px 0;
+        }
 
-#page-footer{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  background-color: #f5f5f5;
-  width: 100%;
-  padding: 20px 0;
-}
+        #email {
+            min-width: 200px;
+            padding: 5px 5px;
+            margin: 15px 0;
+        }
 
-#page-footer ul{
-  display: flex;
-  list-style: none;
-}
+        
+        #submit {
+            font-weight: bold;
+            background-color: rgb(239, 193, 76);
+            border: none;
+            cursor: pointer;
+            padding: 10px 32px;
+            -webkit-transition-duration: 0.4s;
+            /* Safari */
+            transition-duration: 0.4s;
+        }
 
-#page-footer ul li{
-  padding: 0 10px;
-}
+        #submit:hover {
+            background-color: rgb(255, 220, 132);
+        }
 
-#page-footer a{
-  text-decoration: none;
-  color: black;
-}
+        #page-footer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            background-color: #f5f5f5;
+            width: 100%;
+            padding: 20px 0;
+        }
 
+        #page-footer ul {
+            display: flex;
+            list-style: none;
+        }
+
+        #page-footer ul li {
+            padding: 0 10px;
+        }
+
+        #page-footer a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .card-content {
+            height: 180px;
+        }
     </style>
 </head>
 
 <body>
     <header id="header">
-        <h1><span class='hide-on-small'>Hollow Knight - </span>Adventure through a forgotten kingdom of insects and heroes</h1>
-  
+        <h1><span class='hide-on-small'>Hollow Knight - </span>Adventure through a forgotten kingdom of insects and
+            heroes</h1>
+
         <nav id="nav-bar">
-            <img id="header-img" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c78bc3fc-9f08-47ca-81ae-d89055c7ec49/db0enw6-92a4ff34-7247-45f1-8051-1ea40b2059ca.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvYzc4YmMzZmMtOWYwOC00N2NhLTgxYWUtZDg5MDU1YzdlYzQ5XC9kYjBlbnc2LTkyYTRmZjM0LTcyNDctNDVmMS04MDUxLTFlYTQwYjIwNTljYS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.yeLAl9z6x4zP9_BhSjaYbyOk_Obt2j9CBXdOxGSgEZ8" alt="logo image">
-        <div id="nav-links">
-            <a href="#features" class="nav-link">Features</a>
-            <a href="#trailer" class="nav-link">Trailer</a>
-            <a href="#price" class="nav-link">Price</a>
-        </div>
+            <img id="header-img"
+                src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c78bc3fc-9f08-47ca-81ae-d89055c7ec49/db0enw6-92a4ff34-7247-45f1-8051-1ea40b2059ca.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvYzc4YmMzZmMtOWYwOC00N2NhLTgxYWUtZDg5MDU1YzdlYzQ5XC9kYjBlbnc2LTkyYTRmZjM0LTcyNDctNDVmMS04MDUxLTFlYTQwYjIwNTljYS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.yeLAl9z6x4zP9_BhSjaYbyOk_Obt2j9CBXdOxGSgEZ8"
+                alt="logo image">
+            <div id="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#trailer" class="nav-link">Trailer</a>
+                <a href="#price" class="nav-link">Price</a>
+            </div>
         </nav>
     </header>
 
     <main>
-    <div id="features">
-        <div class="content">
-            <h2 style="color:#30c4d8;">Decend into the Dark</h2>
-            <h3 style="color:#30c4d8;">Brave the Depths of a Forgotten Kingdom</h3>
-                <p> Beneath the fading town of Dirtmouth sleeps a vast, ancient kingdom. Many are drawn beneath the surface, searching for riches, or glory, or answers to old secrets. </p>
-                <p> As the enigmatic Hollow Knight, you'll traverse the depths, unravel its mysteries and conquer its evils. </p><br>
-            <h3 style="color:#30c4d8;">Use Your Skills and Reflexes to Surviv</h3>
-                <p style="text-align: left;">Hollow Knight is a challenging 2D action-adventure. You'll explore twisting caverns, battle tainted creatures and escape intricate traps, all to solve an ancient long-hidden mystery.</p>
+        <div id="features">
+            <div class="content">
+                <h1 style="color:#30c4d8;">Decend into the Dark</h1>
+                <h3 style="color:#30c4d8;">Brave the Depths of a Forgotten Kingdom</h3>
+                <p> Beneath the fading town of Dirtmouth sleeps a vast, ancient kingdom. Many are drawn beneath the
+                    surface, searching for riches, or glory, or answers to old secrets. </p>
+                <p> As the enigmatic Hollow Knight, you'll traverse the depths, unravel its mysteries and conquer its
+                    evils. </p><br>
+                <h3 style="color:#30c4d8;">Use Your Skills and Reflexes to Surviv</h3>
+                <p style="text-align: left;">Hollow Knight is a challenging 2D action-adventure. You'll explore twisting
+                    caverns, battle tainted creatures and escape intricate traps, all to solve an ancient long-hidden
+                    mystery.</p>
                 <ul style="text-align:left;">
                     <li>Explore vast, Inter-connected Worlds</li><br>
                     <li>Encounter a bizarre collection of friends and foes</li><br>
                     <li>Evolve with powerful new skills and abilities</li><br>
                 </ul>
+            </div>
         </div>
-    </div>
-    <div id="trailer">
-        <div class="content">
-            <h2 style="color: #30c4d8;">Trailer</h2>
+        <div id="trailer">
+            <div class="content">
+                <h2 style="color: #30c4d8;">Trailer</h2>
                 <hr class="white-hr" style="border-color:#d6e5ff">
-                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/JuP47fRBsWg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </div>
-    <div id="price">
-        <div class="price-container content">
-            <div class="price-card">
-                <div class="price-card-header">Hidden Dreams</div>
-                <div class="price-card-content">
-                  <span class="price-text">$200</span><br>
-                  Mighty new foes emerge!<br>
-                  New Boss fights.<br>
-                  New Upgrades.<br> 
-                  New Music.<br>
-                  <button class="price-btn">BUY NOW</button>
-                </div>
-            </div>
-            <div class="price-card">
-                <div class="price-card-header">The Grimm Troupe</div>
-                <div class="price-card-content">
-                  <span class="price-text">$400</span><br>
-                  Light the Nightmare Lantern.<br> 
-                  Summon the Troupe.<br> 
-                  New Major Quest.<br> 
-                  New Boss Fights.<br> 
-                  New Charms.<br> 
-                  New Enemies.<br> 
-                  New Friends<br>
-                  <button class="price-btn">BUY NOW</button>
-                </div>
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/JuP47fRBsWg"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
         </div>
-    </div>
-    <form id="form" action="https://www.freecodecamp.com/email-submit" target="_blank">
-        <h2>Contact Us</h2>
-        <input type="email" id="email" name="email" placeholder="Enter your email address"><br>
-        <input type="submit" id="submit" value="Get Started">
-    </form>    
+        <div id="price">
+            <div class="price-container content">
+                <div class="price-card">
+                    <div class="price-card-header">Hidden Dreams</div>
+                    <div class="price-card-content">
+                        <span class="price-text">$200</span><br>
+                        <div class="card-content">
+                        Mighty new foes emerge!<br>
+                        New Boss fights.<br>
+                        New Upgrades.<br>
+                        New Music.<br>
+                        </div>
+                        <button class="price-btn">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="price-card">
+                    <div class="price-card-header">The Grimm Troupe</div>
+                    <div class="price-card-content">
+                        <span class="price-text">$400</span><br>
+                        <div class="card-content">
+                        Light the Nightmare Lantern.<br>
+                        Summon the Troupe.<br>
+                        New Major Quest.<br>
+                        New Boss Fights.<br>
+                        New Charms.<br>
+                        New Enemies.<br>
+                        New Friends<br>
+                        </div>
+                        <button class="price-btn">BUY NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form id="form" action="https://www.freecodecamp.com/email-submit" target="_blank">
+            <h2>Contact Us</h2>
+            <input type="email" id="email" name="email" placeholder="Enter your email address"><br>
+            <input type="submit" id="submit" value="Get Started">
+        </form>
     </main>
-    
+
     <footer>
         <div id="page-footer">
-          <ul>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Terms</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+            <ul>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
     </footer>
 
 </body>
-</html>
 
- 
+</html>
