@@ -4,6 +4,62 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
+
+    <style>
+        header {
+    position: fixed;
+    top:0px;
+    width: 100%;
+    line-height: 40px;
+    background-color: rgb(0, 0, 0);
+    color: #f8f9fa;
+    text-align: center;
+    font-size: 0.8em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+        #nav-bar{
+    height: 100px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 5px 5px grey;
+    }
+
+        #header-img{
+    height: 100%;
+    }
+
+        #nav-links{
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    }
+
+    #nav-links a{
+  color: black;
+  text-decoration: none;
+    }
+
+        @media (max-width: 850px){
+        .hide-on-small{
+    display: none;
+            }
+    }
+
+    main{
+  padding-top: 100px;
+  text-align: center;
+    }
+
+    footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+    }
+    
+    </style>
 </head>
 
 <body>
@@ -40,7 +96,7 @@
         <div class="content">
             <h2 style="color: #002f99;">Trailer</h2>
                 <hr class="white-hr" style="border-color:#d6e5ff">
-                <iframe id="video" width="1280" height="720" src="https://www.youtube.com/embed/JuP47fRBsWg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/JuP47fRBsWg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
     <div id="price">
